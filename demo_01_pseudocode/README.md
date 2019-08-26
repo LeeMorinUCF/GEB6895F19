@@ -52,10 +52,10 @@ else
 
 Repetition is a construct that allows instructions to be executed multiple times (i.e. repeated).
 In a repetition problem
-– Count is initialized
+- Count is initialized
 - Condition is Tested
 - Statement is executed
-– Count is incremented
+- Count is incremented
 
 Repetition problems are shown as:
 ```
