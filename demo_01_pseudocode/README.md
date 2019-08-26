@@ -20,17 +20,19 @@ the task at hand.
 ### Assignment
 
 Assignment is the physical act of placing a value into a variable. Assignment can be shown using
+```
 set = 5;
 set = num + set;
+```
 
 The left side is the variable a value is being stored in and the right side is where the variable is being accessed. When a
-variable is assigned a value, the old value is written over with the new value so the old value is gone. x = 5 does not
+variable is assigned a value, the old value is written over with the new value so the old value is gone. ```x = 5``` does not
 mean that x is equal to 5; it means set the variable x to have the value 5. Give x the value 5, make x equal to 5.
 
 ### Input / Output
 
 Input / Output both deal with an outside source (can be a user or another program) receiving or giving information. An
-example would be assuming a fast food restaurant is a program. A driver (user) would submit their order for a burger
+example would be to think of a fast food restaurant as a program. A driver (user) would submit their order for a burger
 and fries (input), they would then drive to the side window and pick up their ordered meal (output.)
 - Output – Write / display / print
 - Input – Read / get / input
@@ -39,10 +41,12 @@ and fries (input), they would then drive to the side window and pick up their or
 
 Selection construct allows for a choice between performing an action and skipping it. It is our conditional statements.
 Selection statements are written as such:
+```
 if ( conditional statement)
-statement list
+  statement list
 else
-statement list
+  statement list
+```
 
 ### Repetition
 
@@ -54,8 +58,17 @@ In a repetition problem
 – Count is incremented
 
 Repetition problems are shown as:
+```
 while ( condition statement)
   statement list
+```
+
+A for loop is another such construction, which executes a statement for each item in a list. 
+```
+for ( item in list_of_items)
+  statement list
+```
+
 
 ## Examples: 
 
