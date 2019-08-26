@@ -1,4 +1,4 @@
 # GEB6895F19
 
-Tools for Business Intelligence
+GEB 6895: Tools for Business Intelligence
 
