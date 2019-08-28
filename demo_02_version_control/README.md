@@ -29,7 +29,7 @@ For extensive edits, or to create a new, separate project built off an exisiting
 
 ### Synching your fork
 
-If other software engineers have editied the original repository, you will want to update those changes to the version in your repository. This is called synching your fork. Some links to help with this are found in [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork) and a concise version is found [here](https://gist.github.com/CristinaSolana/1885435). Notice, that this advice is stated in terms of the relevant commands through a trminal, instead of a point-and-click interface. 
+If other software engineers have editied the original repository, you will want to update those changes to the version in your repository. This is called synching your fork. Some links to help with this are found in [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork) and a concise version is found [here](https://gist.github.com/CristinaSolana/1885435). Notice, that this advice is stated in terms of the relevant commands through a terminal, instead of a point-and-click interface. 
 With this approach, GitHub is a much more versatile tool. 
 
 
