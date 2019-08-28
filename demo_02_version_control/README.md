@@ -13,8 +13,12 @@ This exercise can be completed on any device that has access to the internet - i
 
 Follow the instructions in [Signing up for a new GitHub account](https://help.github.com/en/articles/signing-up-for-a-new-github-account).
 
+### Starting a new coding project
 
-## Version Control: Making edits to your code
+If you want to create a new coding project, you should begin by creating a new repository. A repository is a location in your user space that can be used to store youre code. To initialize a new repository (or repo, for short), follow the instructions in [Create a repo](https://help.github.com/en/articles/create-a-repo). 
+
+
+## Version Control 2: Making edits to your code
 
 
 To participate in this exercise, you should have installed [Git](https://git-scm.com/) and an associated terminal GitBash. 
