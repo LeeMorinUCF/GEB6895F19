@@ -13,9 +13,19 @@ This exercise can be completed on any device that has access to the internet - i
 
 Follow the instructions in [Signing up for a new GitHub account](https://help.github.com/en/articles/signing-up-for-a-new-github-account).
 
-### Starting a new coding project
+### Start a new coding project
 
 If you want to create a new coding project, you should begin by creating a new repository. A repository is a location in your user space that can be used to store youre code. To initialize a new repository (or repo, for short), follow the instructions in [Create a repo](https://help.github.com/en/articles/create-a-repo). 
+
+### Modify an existing project
+
+Several versions of your code can be stored at the same time in units called branches. 
+The default storage space for a repository is called the master branch. Often, you will not want to make edits to the master branch when you are developing new code, so you would [create another branch of the repository](https://help.github.com/en/articles/creating-and-deleting-branches-within-your-repository). 
+Once you have tested your code, it can be pulled to the master branch by [Creating a pull request](https://help.github.com/en/articles/creating-a-pull-request). 
+
+### Forking: Making your own copy of the repo
+
+For extensive edits, or to create a new, separate project built off an exisiting repository, you may want to [fork an existing repo](https://help.github.com/en/articles/fork-a-repo). 
 
 
 ## Version Control 2: Making edits to your code
