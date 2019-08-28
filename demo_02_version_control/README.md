@@ -27,8 +27,13 @@ Once you have tested your code, it can be pulled to the master branch by [Creati
 
 For extensive edits, or to create a new, separate project built off an exisiting repository, you may want to [fork an existing repo](https://help.github.com/en/articles/fork-a-repo). 
 
+### Synching your fork
 
-## Version Control 2: Making edits to your code
+If other software engineers have editied the original repository, you will want to update those changes to the version in your repository. This is called synching your fork. Some links to help with this are found in [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork) and a concise version is found [here](https://gist.github.com/CristinaSolana/1885435). Notice, that this advice is stated in terms of the relevant commands through a trminal, instead of a point-and-click interface. 
+With this approach, GitHub is a much more versatile tool. 
+
+
+## Version Control 2: Using the terminal
 
 
 To participate in this exercise, you should have installed [Git](https://git-scm.com/) and an associated terminal GitBash. 
