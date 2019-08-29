@@ -1,0 +1,9 @@
+Example 3: Write pseudo code that performs the following: Ask a user to enter a number. If the number is between 0
+and 10, write the word blue. If the number is between 10 and 20, write the word red. if the number is between
+20 and 30, write the word green. If it is any other number, write that it is not a correct color option.
+
+input A
+   if A>0 and A<10 then output blue
+   if A>10 and A<20 then output red
+   if A>20 and A<30 then output green
+   if A>30 then output no correct color option
