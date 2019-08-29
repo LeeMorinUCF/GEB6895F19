@@ -1,0 +1,5 @@
+Example 4:
+
+X=1
+While (x<20)
+X=x*5
