@@ -1,3 +1,7 @@
 X = 7
 Y = 5
 Print(Y * X)
+
+Z = “ta”
+A = “-da”
+Print (A+Z)
