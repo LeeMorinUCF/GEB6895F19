@@ -1,0 +1,22 @@
+#example 1
+text1 = 3
+text2 = 4
+sum = text1 + text2
+
+#example 2
+num = 5
+if num = 5
+  then print "yes"
+  else
+    print "no"
+    
+#example 3
+Number = float(input("Pick a number between 0 to 1000."))
+if Number in range(0, 10)
+  print ('blue')
+if Number in range (11,20)
+  print ('red')
+if Number in range (21,30)
+  print ('green')
+if Number in range (31 to 1000)
+  print ('Not a correct color option')
