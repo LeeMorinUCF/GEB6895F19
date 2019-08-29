@@ -1,9 +1,9 @@
 //multiplies two numbers and gives value.
 
-num1=5, num2=3;
+int num_1=5, num_2=3, value;
 
-value;
 
-value=num1*num2;
+
+value=num_1*num_2;
 
 print("value"); 
