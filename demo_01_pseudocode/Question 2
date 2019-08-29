@@ -1,0 +1,7 @@
+# Write pseudo code that tells a user that the number they entered is not a 5 or a 6
+
+User enter $:
+
+if x == 5, then print("Valid")
+if x == 6, then print("Valid")
+if else print("Not Valid") 
