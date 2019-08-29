@@ -1,3 +1,6 @@
-x_list =(4,5)
+Example 1
 
-Sum=20
+Read num5, num6
+Set multi to num5*num6
+Write multi
+
