@@ -18,7 +18,7 @@ var avg = ((arr[1] + arr[2] + arr[3] + arr[4] + arr[5])/5);
 min = arr[i];
 max = arr[i];
   
-for (i =1 to 5){
+for (i =2 to 5){
 
   if arr[i] > max
     max = arr[i]
