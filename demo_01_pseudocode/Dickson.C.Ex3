@@ -4,6 +4,6 @@ and 10, write the word blue. If the number is between 10 and 20, write the word 
 
 input A
    if A>=0 and A<=10 then output blue
-   if A>=10 and A<=20 then output red
-   if A>=20 and A<=30 then output green
-   if A>30 then output no correct color option
+   else if A>=10 and A<=20 then output red
+   else if A>=20 and A<=30 then output green
+   else if A>30 then output no correct color option
