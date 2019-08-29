@@ -1,6 +1,6 @@
 ################################################################################
 # 
-# ECO 5445: Introduction to Business Analytics
+# GEB 6895: Tools for Business Intelligence
 # Introductory Examples: R Workspace
 # 
 # Lealand Morin, Ph.D.
@@ -9,7 +9,7 @@
 # College of Business Administration
 # University of Central Florida
 # 
-# September 24, 2018
+# August 29, 2018
 # 
 ################################################################################
 # 
@@ -53,7 +53,7 @@ rm(list=ls(all=TRUE))
 # Set working directory.
 # The '<-' operator denotes right-to-left assignment.
 # wdPath <- '/path/to/your/folder'
-wdPath <- 'C:/Users/le279259/Documents/Teaching/ECO5445_Fall2018/GitRepos/ECO5445F18/demo_11_intro_to_R'
+wdPath <- 'C:/Users/le279259/Documents/Teaching/GEB6895_Fall2019/GitRepos/demo_03_intro_to_R'
 setwd(wdPath)
 
 # Check this in unix (doesn't always work in Windows).
