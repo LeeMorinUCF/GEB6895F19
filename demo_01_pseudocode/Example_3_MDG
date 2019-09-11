@@ -1,0 +1,14 @@
+Write "Please enter a number."
+
+Read colornum
+If (colornum>0 and colornum<=10}
+  Write "Blue"
+  
+else If (colornum>10 and colornum<=20)
+  Write "Red"
+  
+else If (colornum>20 and colornum<=30)
+  Write "Green"
+  
+else
+  Write "Not a correct color option."
