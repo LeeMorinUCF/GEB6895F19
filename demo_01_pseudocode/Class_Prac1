@@ -1,0 +1,31 @@
+# Class Example
+
+# Add the elements of a vector
+x_list <- (3,2,6,4,7)
+
+# Initialize
+sum <- 0
+
+# Loop through elements
+
+for (i in 1:length(x_list){
+sum <- sum + x_list[i]
+}
+
+# Output to screen
+print(sum)
+> 22
+
+# End
+
+
+# Pseudo Code_doc
+# Example_1:
+a = 1
+b = 2
+x = a + b
+print(x)
+x
+
+
+
