@@ -1,0 +1,15 @@
+Start
+
+Output "Type in a Number" 
+Input
+X=Input
+If 0<X AND X<10
+  Print "Blue"
+Else if 10<X AND X<20
+  Print "Red" 
+Else if 20<X AND X<30 
+  Print "Green"
+Else X>30
+  Print "This is not a correct color option" 
+  
+End
