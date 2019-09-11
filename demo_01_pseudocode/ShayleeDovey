@@ -1,0 +1,3 @@
+var = ( input("what is your name? ") 
+
+Print:( "hello", var) 
