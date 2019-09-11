@@ -3,9 +3,7 @@
 The practice of saving successive versions of computer code is known as version control. With this practice, you can securely store past and present versions of your code on a remote computer and share it with others. 
 The version control platform that we will use is called GitHub and the reason for this choice is outlined in Paarsch and Golyaev.
 
-## GitHub Workflow 
 
-<img src="GitHub_Workflow.jpg" width="1000"/>
 
 ## Version Control 1: Opening an account
 
@@ -34,9 +32,6 @@ For extensive edits, or to create a new, separate project built off an exisiting
 If other software engineers have editied the original repository, you will want to update those changes to the version in your repository. This is called synching your fork. Some links to help with this are found in [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork) and a concise version is found [here](https://gist.github.com/CristinaSolana/1885435). Notice, that this advice is stated in terms of the relevant commands through a terminal, instead of a point-and-click interface. 
 With this approach, GitHub is a much more versatile tool. 
 
-## Working in Parallel in Separate Branches
-
-<img src="GitHub_Branches.jpeg" width="500"/>
 
 ## Version Control 2: Using the terminal
 
