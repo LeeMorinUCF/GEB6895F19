@@ -1,0 +1,12 @@
+###Write pseudo code that will perform the following.
+a) Read in 5 separate numbers.
+b) Calculate the average of the five numbers.
+c) Find the smallest (minimum) and largest (maximum) of the five entered numbers.
+d) Write out the results found from steps b and c with a message describing what they are###
+
+numbers = read(numbers)
+avverage = avg(numbers)
+minimum = min(numbers)
+max = max(numbers)
+
+print(average "is the average of the numbers, " minimum "is the minimum of the numbers, and" max "is the max of the numbers")

@@ -1,0 +1,4 @@
+#Write pseudo code to print all multiples of 5 between 1 and 100 (including both 1 and 100).
+
+run x as 1 - 100
+if X % 5 = 0, then print x
