@@ -46,6 +46,8 @@ help(lm)
 # Clear workspace.
 # The remove function removes everything in the workspace when the list is all.
 rm(list=ls(all=TRUE))
+# this above line removes everything fromthe Global environment. This will allow you to start from a fresh start when testing. For ex, when you are updating something.
+
 
 # Load library of functions.
 # source('MyRcode1.R')
@@ -53,8 +55,9 @@ rm(list=ls(all=TRUE))
 # Set working directory.
 # The '<-' operator denotes right-to-left assignment.
 # wdPath <- '/path/to/your/folder'
-wdPath <- 'C:/Users/le279259/Documents/Teaching/GEB6895_Fall2019/GitRepos/demo_03_intro_to_R'
+wdPath <- 'C:/Users/19043/Documents/GEB/ForkEx/GEB6895F19/demo_03_intro_to_R'
 setwd(wdPath)
+# another way to get to the working directory is by going to the bottom right box, File, and then follow folders to the desired file, click more and click Set as working directory  
 
 # Check this in unix (doesn't always work in Windows).
 system('pwd')
@@ -137,6 +140,14 @@ pi_plus <- some_numbers.integers + value_of_pi
 
 # The concatenation function c() is used to form lists of objects.
 more_integers <- c(some_numbers.integers, 11:15)
+
+# Lets break this
+some_numbers.integers + more_integers
+
+c(1,2,3,4,5,6) + c(1,2)
+
+
+
 
 
 # Lets make a vector of important numbers.
