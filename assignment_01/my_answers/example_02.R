@@ -6,7 +6,7 @@
 # Get number from user.
 num_in <- readline(prompt="Enter a number: ")
 
-# Determine if number is a 5 or 6.
+# Determine if number is a 5 or 6 and inform user of result.
 if (num_in == '5') {
   print('You entered a 5.')
 } else if (num_in == '6') {
