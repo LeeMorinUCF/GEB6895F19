@@ -53,7 +53,7 @@ rm(list=ls(all=TRUE))
 # Set working directory.
 # The '<-' operator denotes right-to-left assignment.
 # wdPath <- '/path/to/your/folder'
-wdPath <- 'C:/Users/le279259/Documents/Teaching/GEB6895_Fall2019/GitRepos/demo_03_intro_to_R'
+wdPath <- 'C:/GEB_19/GEB6895F19/demo_03_intro_to_R'
 setwd(wdPath)
 
 # Check this in unix (doesn't always work in Windows).
@@ -77,6 +77,8 @@ ls()
 workspaceFileName <- 'myWorkspace1'
 workspacePath <- sprintf('%s/%s.RData', wdPath, workspaceFileName)
 save.image(workspacePath)
+
+
 
 # Now remove some variables. 
 rm(dataPath)
