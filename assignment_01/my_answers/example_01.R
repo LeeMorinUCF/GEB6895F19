@@ -19,4 +19,4 @@ num_2 <- as.integer(readline(prompt="Enter number 2 of 2: "))
 total <- multiply_two(num_1, num_2)
 
 # Tell user the total.
-sprintf("%i x %i = %i",num_1, num_2, total)
+print(sprintf("%i x %i = %i",num_1, num_2, total))
