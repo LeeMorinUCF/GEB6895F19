@@ -1,0 +1,12 @@
+X = 7;
+Y = 5;
+Print(Y * X);
+
+Z = “ta”;
+A = “-da”;
+Print (A+Z);
+
+int 7, 5, multi;
+cin>>7>>5; 
+multi = 7 * 5; 
+cout<<multi<<endl;

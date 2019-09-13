@@ -1,0 +1,28 @@
+'Write a guessing game where the user has to guess a secret number. 
+'After every guess the program tells the user whether their number was too large or too small. 
+'At the end the number of tries needed should be printed. 
+'It counts only as one try if they input the same number multiple times consecutively.
+
+Generate random number 'x'. 
+Print 'Guess the number between 0 and 99'
+Open textbox that allows user to input value with two numerical digits
+
+Create 'Y', which has an initial value of 0
+Create 'All Guesses' which stores previous input value
+
+Loop
+
+Retrieve numerical input from user
+  If input is not numerical
+    Print 'Please input a numerical value between 0-99'
+  If input is numerical and < x
+  OR
+  If input is numerical and > x
+    Print 'Try Again'
+    If input does not equal 'All Guesses', Add 1 to 'Y'
+  If input is numerical and = x
+    If input does not equal 'All Guesses', Add 1 to 'Y'
+    End Loop
+    
+Print 'Congratulations, you guessed the number and it only took you 'Y' tries'
+   

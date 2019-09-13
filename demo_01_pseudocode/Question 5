@@ -1,0 +1,5 @@
+#Write pseudo code that will count all the even numbers up to a user defined stopping point.
+
+User imput X
+From 1 to X:
+count where i % 2 = 0

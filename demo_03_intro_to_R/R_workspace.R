@@ -31,6 +31,10 @@
 ################################################################################
 
 '?'(lm)
+
+# Highlight 'help(lm)'
+# Ctrl & Enter
+
 help(lm)
 
 # With any open source language, Google is your best friend.
@@ -44,7 +48,7 @@ help(lm)
 ################################################################################
 
 # Clear workspace.
-# The remove function removes everything in the workspace when the list is all.
+# rm is: The remove function removes everything in the workspace when the list is all.
 rm(list=ls(all=TRUE))
 
 # Load library of functions.
@@ -53,7 +57,7 @@ rm(list=ls(all=TRUE))
 # Set working directory.
 # The '<-' operator denotes right-to-left assignment.
 # wdPath <- '/path/to/your/folder'
-wdPath <- 'C:/Users/le279259/Documents/Teaching/GEB6895_Fall2019/GitRepos/demo_03_intro_to_R'
+wdPath <- 'C:/Users/14077/Documents/GEB6895-Fall2019/GitRepos/Fork-9.11.19/GEB6895F19/demo_03_intro_to_R'
 setwd(wdPath)
 
 # Check this in unix (doesn't always work in Windows).
