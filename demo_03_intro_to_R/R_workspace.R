@@ -230,10 +230,19 @@ df3 <- data.frame(var1 = 21:30,
 
 
 # Create a matrix.
-# B = matrix( 
-#   +   c(2, 4, 3, 1, 5, 7), 
-#   +   nrow=3, 
-#   +   ncol=2) 
+A <- matrix(c(2, 4, 3, 1, 5, 7),
+            nrow = 2,
+            ncol = 3)
+x <- matrix(c(1, 0, 2),
+            nrow = 3,
+            ncol = 1)
+
+A
+x
+
+b <- A %*% x
+
+b
 
 
 # Categorical variables are called 'factors'.
@@ -548,20 +557,30 @@ addSeveralNumbers(3,2,1,NA,-1)
 # install.packages('name_of_R_package_goes_here') # Argument is a string.
 
 
-# Load libraries for time series analysis.
+# Load libraries for handling data.
 
-# install.packages('timeSeries')
-library(timeSeries)
+# Packages for interacting with Microsoft Excel:
 
-# install.packages('xts')
-library(xts)
+# install.packages('XLConnect')
+library(XLConnect)
 
-# install.packages('tseries')
-library(tseries)
+# install.packages('xlsx')
+library(xlsx)
 
-# install.packages('forecast')
-library(forecast)
+# Packages for using data from other statistical software:
 
+# install.packages('foreign')
+library(foreign)
+
+# install.packages('haven')
+library(haven)
+
+# These are a few among many listed on:
+# https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages
+
+
+
+# End
 
 
 

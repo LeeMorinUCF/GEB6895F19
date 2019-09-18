@@ -55,6 +55,9 @@ data(cars)
 # Display the entire dataset (not for large files!).
 cars  
 
+# 
+?cars
+
 
 # Write this to your data path.
 # write.table(cars, file=sprintf('%s/%s', data_path, 'cars.txt'))
@@ -152,7 +155,9 @@ carsDf[selRows, ]
 # A data frame is essentially a list of objects.
 class(carsDf$dist)
 
-
+# Exercise:
+# 1. List the 5 fastest cars. 
+# 2. List the 4 cars with the shortest stopping distance.
 
 
 # The iris dataset has categorical variables.
@@ -239,6 +244,16 @@ irisDf2
 
 # Sort the data by one variable.
 irisDf[order(irisDf$Petal.Length),]
+
+
+# Exercise:
+# 1. Calculate summary statistics for the three types 
+#   of flowers separately.
+# 2. List the petal width for flowers of type setosa 
+#   with petal length larger than average. 
+
+
+
 
 
 
