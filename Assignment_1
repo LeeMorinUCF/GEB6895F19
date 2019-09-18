@@ -1,0 +1,98 @@
+
+# Question 1
+
+psuedocode
+set num_1, num_2
+multiplication of num_1 & num_2
+print multiplication sum
+
+num_1 <- seq(0, 100, by = 1)
+num_2 <- seq(0, 100, by = 1)
+  print("original vectors:')
+  print(num_1)
+  print(num_2)
+  print("product of two vectors:')
+  sum = num_1 * num_2
+  print (sum)
+  
+# Question 2
+Psuedocode
+ask for number
+read if 5 or 6
+let you know if the number is a five or six
+
+num_in <- readline(promt= "enter a number:")
+
+if(isfive = 5)
+if(issix = 6)
+  num_out <- readline(prompt = "your number is a five or six:")
+  
+  else num_out <- readline(prompt = "your number is not a five or six:")
+  
+  
+# Question 3
+Pseudocode
+write to enter a number
+0>x>10 then blue
+11>x>20 then red
+21>x>30 then green
+x>30 then no answer
+
+num_in <- readline(prompt = "please enter a number:")
+
+num_1 <- seq(0, 10, by = 1)
+num_2 <- seq(11, 20, by = 1)
+num_3 <- seq(21, 30, by = 1)
+
+if(num_1) <- readline(prompt = "blue:")
+if(num_2) <- readline(prompt = "red:")
+if(num_3) <- readline(prompt = "green:")
+
+# Question 4
+Psuedocode
+set starting point
+set n
+set by multiples of 5
+
+x_values <- seq(0, 1000000000, by = 5)
+
+
+
+
+
+
+
+
+# Question 5
+Psuedocode
+ask you to type in a number
+use multiples of 2 to get to user number
+
+int x, count, even; 
+cout<<"0";
+x = 1;
+cin>>count; while(x < count)
+        {  cout<<x*2;
+  x = x + 1;
+} 
+
+
+
+
+
+#Question 6
+psuedocode
+ask user to enter 5 numbers
+find minimum
+finid min
+find max
+print to use the gathered info
+
+num_in <- readline(prompt = "please enter five numbers:") 
+x_values <- c(1,3,4,6,7)
+mean(x_values)
+min(x_values)
+max(x_values)
+  print("the average is (mean(x_values)")
+  print("the average is (min(x_values)")
+  print("the average is (max(x_values)")
