@@ -34,12 +34,12 @@ rm(list=ls(all=TRUE))
 
 # Set working directory.
 # The '<-' operator denotes right-to-left assignment.
-wdPath <- '/path/to/your/folder'
-setwd(wdPath)
+wd_path <- '/path/to/your/folder'
+setwd(wd_path)
 
 
 # Set paths to other folders.
-# dataPath <- sprintf('%s/data', wdPath)
+# data_path <- sprintf('%s/data', wd_path)
 # Optional: Organize data for larger projects.
 
 
@@ -57,11 +57,11 @@ cars
 
 
 # Write this to your data path.
-# write.table(cars, file=sprintf('%s/%s', dataPath, 'cars.txt'))
+# write.table(cars, file=sprintf('%s/%s', data_path, 'cars.txt'))
 write.table(cars, file = 'cars.txt')
 
 # Read in your copy.
-# carsDf <- read.table(file=sprintf('%s/%s', dataPath, 'cars.txt'))
+# carsDf <- read.table(file=sprintf('%s/%s', data_path, 'cars.txt'))
 carsDf <- read.table(file = 'cars.txt')
 
 # Should be the same.
@@ -76,11 +76,11 @@ iris
 
 
 # Write this to your data path in csv format.
-# write.csv(iris, file=sprintf('%s/%s', dataPath, 'iris.csv'))
+# write.csv(iris, file=sprintf('%s/%s', data_path, 'iris.csv'))
 write.csv(iris, file = 'iris.csv')
 
 # Read in your copy.
-# irisDf <- read.csv(file=sprintf('%s/%s', dataPath, 'iris.csv'))
+# irisDf <- read.csv(file=sprintf('%s/%s', data_path, 'iris.csv'))
 irisDf <- read.csv(file = 'iris.csv')
 
 
@@ -96,7 +96,7 @@ irisDf <- read.csv(file = 'iris.csv')
 # Reload the datasets created earlier.
 
 # The cars dataset.
-# carsDf <- read.table(file=sprintf('%s/%s', dataPath, 'cars.txt'))
+# carsDf <- read.table(file=sprintf('%s/%s', data_path, 'cars.txt'))
 carsDf <- read.table(file = 'cars.txt')
 carsDf
 
@@ -156,7 +156,7 @@ class(carsDf$dist)
 
 
 # The iris dataset has categorical variables.
-# irisDf <- read.csv(file=sprintf('%s/%s', dataPath, 'iris.csv'))
+# irisDf <- read.csv(file=sprintf('%s/%s', data_path, 'iris.csv'))
 irisDf <- read.csv(file = 'iris.csv')
 irisDf
 
