@@ -182,6 +182,10 @@ list_of_stuff <- list(thing1 = some_numbers.integers,
 other_list <- list(item1 = x1 <- 2, item2 = 'string')
 x1
 
+# A better way:
+x2 <- 2
+yet_another_list <- list(item1 = x2, item2 = 'string')
+
 
 # Print it to screen.
 list_of_stuff
@@ -192,6 +196,32 @@ list_of_stuff$thing1
 list_of_stuff['thing1']
 list_of_stuff[2]
 list_of_stuff[[1]]
+
+names(list_of_stuff)
+
+
+for (name in names(list_of_stuff)) {
+  
+  print(name)
+  # name
+  
+  print(mean(list_of_stuff[[name]]))
+  
+}
+
+# Equivalently:
+for (name_num in 1:length(names(list_of_stuff))) {
+  
+  print(name_num)
+  
+  name <- names(list_of_stuff)[name_num]
+  
+  print(name)
+  
+  print(mean(list_of_stuff[[name]]))
+  
+}
+
 
 
 bigger_list <- list(first_list = list_of_stuff, next_list = seq(5))
@@ -204,6 +234,15 @@ bigger_list$first_list$thing1
 # Data frames behave similarly (because a data frame IS a list).
 df1 <- data.frame(var1 = 1:10, var2=sprintf('row%d', 1:10))
 # Note '%d' is the escape sequence for integers.
+
+
+df1['var1']
+
+
+df1[2:7, 'var1']
+
+df1[2:7, ]
+
 
 
 # Many statistical functions use a formula object
@@ -378,6 +417,18 @@ if (weather == 'rainy') {
   print('Bring sunglasses.')
 } 
 
+if (weather == 'rainy') {}
+if (weather == 'sunny') {}
+
+
+
+is_it_sunny <- weather == 'sunny'
+is_it_rainy <- weather == 'rainy'
+
+
+test <- weather == 'sunny'
+
+
 
 
 weather <- 'tornado'
@@ -480,11 +531,39 @@ addTwoNumbers <- function(first_number, second_number) {
   
   total <- first_number + second_number
   
+  # print(first_number)
+  # print(second_number)
+  
   return(total)
 }
 
 # Call the function.
 addTwoNumbers(3,4)
+
+the_sum <- addTwoNumbers(3,4)
+
+
+addThreeNumbers <- function(first_number, second_number) {
+  
+  third_number <- 200
+  
+  total <- first_number + second_number + third_number
+  
+  # print(first_number)
+  # print(second_number)
+  
+  return(total)
+}
+
+addThreeNumbers(3,4)
+
+third_number <- 100
+third_number <- 101
+
+addThreeNumbers(3,4)
+
+
+addThreeNumbers(3,4)
 
 # Try this.
 addTwoNumbers(3,4,5)
