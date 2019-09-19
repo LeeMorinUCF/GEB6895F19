@@ -26,6 +26,7 @@ rm(list=ls(all=TRUE))
 
 # Set working directory.
 wd_path <- '/path/to/your/folder'
+# wd_path <- '~/Teaching/GEB6895_Fall_2019/Mirror/GEB6895F19-mirror-2/assignment_02'
 setwd(wd_path)
 
 # Load library of functions.
