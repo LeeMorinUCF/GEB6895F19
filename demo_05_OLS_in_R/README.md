@@ -6,7 +6,7 @@
 
 <img src="Regression_Equation.png">
 
-### The minimization Problem
+### The Minimization Problem
 
 <img src="Regression_Minimization.png">
 
@@ -16,10 +16,11 @@
 
 ## Logistic Regression
 
-### The logistic equation
+### The Logistic Equation
 
 <img src="Logistic_Regression_Equation.gif">
 
+### Comparison with Linear Probability Model
 
 <img src="Logistic_vs_OLS_Regression.png">
 
