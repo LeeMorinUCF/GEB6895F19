@@ -16,7 +16,7 @@
 ##################################################
 # 
 # Calculating_beta_hat gives an example of OLS regression
-#   using data imported entered within this script.
+#   using data entered within this script.
 #   It includes exercises to calculate the OLS
 #   estimates from direct calculation and optimization.
 # 
@@ -74,9 +74,12 @@ lm_model <- lm(data = agg_data,
 # Output the results to screen.
 summary(lm_model)
 
+# Store the slope coefficient. 
+beta_1_hat_lm <- NA
+
 
 ##################################################
-# Exercise 1: Estimating beta from direct calculation
+# Estimating beta from direct calculation
 ##################################################
 
 # Calculate the estimate of the slope coefficient above. 
@@ -92,10 +95,25 @@ beta_1_hat_calc <- NA
 
 
 ##################################################
-# Exercise 2: Estimating beta from optimization
+# Estimating beta from solving equations
 ##################################################
 
-# Part a: Sum of Squared residuals.
+# Part i: Define matrices for normal equations.
+
+X_T_x <- NA
+
+X_T_y <- NA
+
+# Part ii: Solve the equations for beta. 
+
+beta_hat_norm <- NA
+
+
+##################################################
+# Estimating beta from optimization
+##################################################
+
+# Part i: Sum of Squared residuals.
 
 # Note that beta is a vector of two coefficients. 
 
@@ -111,11 +129,15 @@ ssr <- function(beta, y, x) {
   return(ssr)
 }
 
-# Part b: Plot the SSR function on a graph.
+# Part ii: Plot the SSR function on a graph.
+
+# Draw several lines for fixed values of beta_0, 
+# with candidate values of beta_1 on the horizontal axis.
+
 # Verify that the maximum is at the beta_hat estimate.
 
 
-# Part c: Optimize the SSR function w.r.t. beta. 
+# Part iii: Optimize the SSR function w.r.t. beta. 
 
 # ...
 
