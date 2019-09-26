@@ -30,7 +30,7 @@ rm(list=ls(all=TRUE))
 
 # Set working directory.
 # wd_path <- '/path/to/your/folder' 
-wd_path <- '~/Teaching/GEB6895_Fall_2019/GitRepos/demo_05_OLS_in_R' # On Windows
+wd_path <- '~/Class_Exercises/upstream/GEB6895F19/demo_05_OLS_in_R' # On Windows
 
 setwd(wd_path)
 
