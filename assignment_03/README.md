@@ -6,11 +6,20 @@ Search for "git markdown cheat sheet" for links with descriptions of the command
 
 # Assignment 3
 
+Beginning lines with sequences of ```#```, ```##``` or ```###``` will create levels of headers. 
+
 ## Question 1
 
 a) This is my answer to part (a). 
 
 b) This is my answer to part (b). 
+
+The command 
+
+```
+<img src="Reg_Results_Sample.png" width="1000"/>
+``` 
+will display an image if the relevant file is saved in the same folder. 
 
 <img src="Reg_Results_Sample.png" width="1000"/>
 
@@ -25,6 +34,8 @@ e) This is my answer to part (e).
 <img src="Reg_Results_Sample.png" width="1000"/>
 
 
+## Question 2
 
+a)...
 
 
