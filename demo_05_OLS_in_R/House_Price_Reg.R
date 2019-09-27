@@ -37,6 +37,9 @@ wd_path <- '~/Teaching/GEB6895_Fall_2019/GitRepos/demo_05_OLS_in_R' # On Windows
 
 setwd(wd_path)
 
+# Check folder:
+getwd()
+
 # No libraries required.
 # Otherwise would have a command like the following.
 # library(name_of_R_package)
@@ -54,9 +57,16 @@ summary(housing_data)
 
 
 # Check that earthquakes occurred only in California:
+table(housing_data[, 'in_cali'])
 table(housing_data[, 'in_cali'], housing_data[, 'earthquake'])
 # Data errors are the largest cause of problems in model-building.
 
+class(housing_data)
+
+colnames(housing_data)
+head(housing_data[, 'income'], 10)
+head(housing_data[, 3], 10)
+head(housing_data[, 4], 10)
 
 # Plot a scattergraph of income and housing prices. 
 plot(housing_data[, 'income'], 
@@ -76,12 +86,35 @@ print(round(corr_matrix, 3))
 # Model 1: All Variables Included
 ##################################################
 
+# Note the formula object:
+# Y ~ X_1 + X_2 + X_3
+
+
 # Estimate a regression model.
 lm_full_model <- lm(data = housing_data, 
                     formula = house_price ~ income + in_cali + earthquake)
 
 # Output the results to screen.
 summary(lm_full_model)
+
+# See what's inside the lm_full_model object:
+class(lm_full_model)
+attributes(lm_full_model)
+
+lm_full_model$coefficients
+lm_full_model$coefficients['income']
+lm_full_model$coefficients[2]
+
+coef(lm_full_model)
+
+# Model predictions:
+summary(predict(lm_full_model))
+housing_data[, 'predictions'] <- predict(lm_full_model)
+
+attributes(summary(lm_full_model))
+
+lm_full_model_summ <- summary(lm_full_model)
+lm_full_model_summ$adj.r.squared
 
 
 ##################################################

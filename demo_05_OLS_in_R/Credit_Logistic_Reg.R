@@ -18,6 +18,20 @@
 # Credit_Logistic_Reg gives an example of OLS 
 #   and logistic regression using data imported from a spreadsheet.
 # 
+# The variables in the dataset credit_data.csv are as follows:
+# 
+#   default: 1 if borrower defaulted on a loan
+#   bmaxrate: Maximum rate of interest on any part of the loan
+#   amount: the amount funded on the loan
+#   close: borrower takes the option of closing the listing 
+#     until it is fully funded
+#   AA: borrowers FICO score greater than 760
+#   A: borrowers FICO score between 720 and 759
+#   B: borrowers FICO score between 680 and 719
+#   C: borrowers FICO score between 640 and 679
+#   D: borrowers FICO score between 600 and 639
+#   
+# 
 ##################################################
 
 
@@ -61,6 +75,11 @@ hist(credit_data[, 'default'])
 cor(credit_data[, 2:ncol(credit_data)])
 # Be aware of any explanatory variables that are highly correlated
 # (both positively and negatively) with each other.
+
+
+cor(credit_data[, c('bmaxrate', 'AA', 'A', 'B', 'C', 'D')])
+
+
 
 ##################################################
 # Generating New Variables
@@ -137,6 +156,21 @@ credit_data[, 'default_prob_logit'] <- predict(logit_model_1, type = 'response')
 summary(credit_data[, 'default_prob_logit'])
 # Does this look better?
 
+
+##################################################
+# Estimating a Regression Model
+# Model 4: Logistic model for default probability
+# 
+##################################################
+
+# Estimate a logistic regression model.
+logit_model_2 <- glm(data = credit_data, 
+                     formula = default ~ bmaxrate + 
+                       close + bankcardutil, 
+                     family = 'binomial')
+
+# Output the results to screen.
+summary(logit_model_2)
 
 
 ##################################################
