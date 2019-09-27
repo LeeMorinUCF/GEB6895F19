@@ -218,5 +218,29 @@ Then enter this into your terminal
 git revert 74abb7e
 ```
 
+Then there is an additional step. 
+Since reverting a commit is an unusual step, the default action after this command is to add a message tp the (inverse) commit. 
+
+<img src="Enter_Revert_Message_in_vim.png" width="1000"/>
+
+This screen is a classic text editor called ```vim```. 
+If you are happy with the comments as is, exit ```vim``` by pressing ```:``` then ```q``` to quit. 
+If you do want to add a comment, press ```i``` to enter ```INSERT``` mode, 
+then navigate with the arrow keys and type in a coment. 
+Next press the ```Esc``` key to exit ```INSERT``` mode, 
+followed by ```:``` then ```wq``` to write the changes and quit.  
+You should now get back to your terminal prompt. 
+
+The next step is to push these changes to your repo. 
+The reverted content is the inverse of the very same content that was added to the original commit. 
+Each line and each file that was added was then deleted in the revert and vice versa for lines and files deleted in the original commit. 
+It is as if you reversed those changes manually and then added and committed the changes. 
+
+
+P.S. This example was not David's fault in any way. 
+I aciddentally pushed his content to the upstream instead of the origin of his mirror. 
+It happens to everyone...eventually. 
+Now we know how to fix it. 
+
 
 
