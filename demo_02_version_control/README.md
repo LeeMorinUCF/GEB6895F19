@@ -201,5 +201,22 @@ git pull origin master
 As mentioned above, if you want to push updates and your version is not current, you will have to pull the recent changes before you can push your updates to the repo. 
 
 
+## The Command You Hope to Rarely Use
+
+Sometimes you might commit a change that you will later want to remove. 
+Even if a commit is already pushed, it is possible to reverse that commit, 
+using the command ```git revert <commit hash>```, 
+where the ```<commit hash>``` is an alphanumeric code that uniquely identifies the commit. 
+Browse to any file in the commit and click on the link or message referring to the commit and obtain the commit hash. 
+
+
+<img src="Finding_Commit_Hash.png" width="1000"/>
+
+Then enter this into your terminal
+
+```
+git revert 74abb7e
+```
+
 
 
