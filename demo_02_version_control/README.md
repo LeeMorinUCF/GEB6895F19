@@ -201,7 +201,7 @@ git pull origin master
 As mentioned above, if you want to push updates and your version is not current, you will have to pull the recent changes before you can push your updates to the repo. 
 
 
-## The Command You Hope to Rarely Use
+## Appendix: The Command You Hope to Rarely Use
 
 Sometimes you might commit a change that you will later want to remove. 
 Even if a commit is already pushed, it is possible to reverse that commit, 
@@ -219,7 +219,7 @@ git revert 74abb7e
 ```
 
 Then there is an additional step. 
-Since reverting a commit is an unusual step, the default action after this command is to add a message tp the (inverse) commit. 
+Since reverting a commit is an unusual step, the default action after this command is to add a message to the (inverse) commit. 
 
 <img src="Enter_Revert_Message_in_vim.png" width="1000"/>
 
