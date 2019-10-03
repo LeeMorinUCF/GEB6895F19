@@ -2,8 +2,7 @@
 # 
 # GEB 6895: Tools for Business Intelligence
 # 
-# OLS Regression Demo
-# Regression with Data from Spreadsheet
+# Reading from and Writing to Excel Spreadsheets
 # 
 # Lealand Morin, Ph.D.
 # Assistant Professor
@@ -11,12 +10,13 @@
 # College of Business Administration
 # University of Central Florida
 # 
-# September 9, 2019
+# October 2, 2019
 # 
 ##################################################
 # 
-# House_Price_Reg gives an example of OLS regression
-#   using data imported from a spreadsheet.
+# Excel_with_R gives an example of data analysis
+#   using data imported from an Excel spreadsheet
+#   and the results are written to new spreeadsheets.
 # 
 # Dependencies:
 #   None. 
