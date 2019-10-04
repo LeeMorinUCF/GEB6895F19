@@ -63,6 +63,7 @@ avg_income <- 0.1
 sd_income <- 0.01
 
 # Extra parameter for measurement error in income. 
+number_of_income_variables <- 2
 measurement_error_income <- 0.002
 
 # Fraction of dataset in California.
@@ -98,7 +99,9 @@ table(obsns_for_estimation)
 # Call the housing_sample function from ECO6416_Sim_Data.R. 
 housing_data <- housing_sample(beta_0, beta_income, beta_cali, beta_earthquake, 
                                avg_income, sd_income, pct_in_cali, prob_earthquake, 
-                               sigma_2, num_obs)
+                               sigma_2, num_obs, 
+                               number_of_income_variables, measurement_error_income, 
+                               number_of_rainfall_variables, prob_rainfall)
 
 # Summarize the data.
 summary(housing_data)
@@ -127,15 +130,9 @@ table(housing_data[!obsns_for_estimation, 'in_cali'],
 # that are correlated with income are available. 
 #--------------------------------------------------
 
-# Income measure 1.
-housing_data[, 'income_1'] <- 0
-housing_data[, 'income_1'] <- housing_data[, 'income'] + 
-  rnorm(n = num_obs, mean = 0, sd = measurement_error_income)
+income_variable_list <- sprintf('income_%d', seq(1:number_of_income_variables))
+# These variables are created in the House_Price_Sim_Data.R script. 
 
-# Income measure 2.
-housing_data[, 'income_2'] <- 0
-housing_data[, 'income_2'] <- housing_data[, 'income'] + 
-  rnorm(n = num_obs, mean = 0, sd = measurement_error_income)
 
 # Check how strongly the data are correlated. 
 cor(housing_data[, c('income', 'income_1', 'income_2')])
@@ -155,21 +152,7 @@ plot(housing_data[, 'income_1'], housing_data[, 'income_2'],
 #--------------------------------------------------
 
 rainfall_variable_list <- sprintf('rainfall_%d', seq(1:number_of_rainfall_variables))
-# Note the shortcut instead of typing every line. 
-
-# Loop on variable number for rainfall
-# and create a variable similar to that for earthquakes. 
-for (var_num in 1:number_of_rainfall_variables) {
-  
-  # Get the new variable name. 
-  this_rainfall_variable <- sprintf('rainfall_%d', var_num)
-  
-  # Create the new rainfall variable. 
-  housing_data[, this_rainfall_variable] <- 0
-  housing_data[ runif(num_obs) <= prob_rainfall , this_rainfall_variable] <- 1
-  
-}
-
+# These variables are also created in the House_Price_Sim_Data.R script. 
 
 # Summarize the data.
 summary(housing_data)
@@ -177,7 +160,7 @@ summary(housing_data)
 
 
 # Collect all available variables into a single list. 
-variable_list <- c('income_1', 'income_2', 'in_cali', 'earthquake', 
+variable_list <- c(income_variable_list, 'in_cali', 'earthquake', 
                    rainfall_variable_list)
 # Note that true income is not in this list.
 # We are pretending that it is unobserved. 

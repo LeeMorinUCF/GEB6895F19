@@ -49,7 +49,9 @@
 
 housing_sample <- function(beta_0, beta_income, beta_cali, beta_earthquake, 
                            avg_income, sd_income, pct_in_cali, prob_earthquake, 
-                           sigma_2, num_obs) {
+                           sigma_2, num_obs, 
+                           number_of_income_variables = 0, measurement_error_income = 0, 
+                           number_of_rainfall_variables = 0, prob_rainfall = 0) {
   
   # Initialize variables. 
   housing_data <- data.frame(obsn_num = 1:num_obs, # Label with observation number.
@@ -79,6 +81,55 @@ housing_sample <- function(beta_0, beta_income, beta_cali, beta_earthquake,
     beta_earthquake * housing_data[, 'earthquake'] + 
     housing_data[, 'epsilon']
   
+  
+  ##################################################
+  # Generating Additional Data
+  # The extra data that is not in the model
+  ##################################################
+  
+  #--------------------------------------------------
+  # Assume that true income is not observed but some variables 
+  # that are correlated with income are available. 
+  #--------------------------------------------------
+  if (number_of_income_variables > 0) {
+    
+    for (income_num in 1:number_of_income_variables) {
+      
+      income_var_name <- sprintf('income_%d', income_num)
+      
+      housing_data[, income_var_name] <- 0
+      housing_data[, income_var_name] <- housing_data[, 'income'] + 
+        rnorm(n = num_obs, mean = 0, sd = measurement_error_income)
+      
+    }
+    
+  }
+  
+  #--------------------------------------------------
+  # Further, assume that many rainfall variables 
+  # are available for the estimation, even though
+  # they do not appear in the model (irrelevant variables). 
+  #--------------------------------------------------
+  
+  if (number_of_rainfall_variables > 0) {
+    
+    rainfall_variable_list <- sprintf('rainfall_%d', seq(1:number_of_rainfall_variables))
+    # Note the shortcut instead of typing every line. 
+    
+    # Loop on variable number for rainfall
+    # and create a variable similar to that for earthquakes. 
+    for (var_num in 1:number_of_rainfall_variables) {
+      
+      # Get the new variable name. 
+      this_rainfall_variable <- sprintf('rainfall_%d', var_num)
+      
+      # Create the new rainfall variable. 
+      housing_data[, this_rainfall_variable] <- 0
+      housing_data[ runif(num_obs) <= prob_rainfall , this_rainfall_variable] <- 1
+      
+    }
+    
+  }
   
   return(housing_data)
   
