@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 """
 ##################################################
-# 
-# ECO 5445: Intro to Business Analytics
-# 
+#
+# GEB 6895: Tools for Business Intelligence
+#
 # Data Analysis with Pandas: Linear Regression
-# 
+#
 # Lealand Morin, Ph.D.
 # Assistant Professor
 # Department of Economics
 # College of Business Administration
 # University of Central Florida
-# 
+#
 # October 2, 2019
-# 
+#
 # This script outlies a few approaches to linear regression in python.
 # It uses a sample dataset housing_data.csv with the following variables:
 #     obsn_num an integer label for each observation
@@ -21,7 +21,7 @@
 #     income (in millions)
 #     in_cali (whether the property is in California)
 #     earthquake (whether an earthquake had occurred)
-# 
+#
 ##################################################
 """
 
@@ -33,7 +33,7 @@
 
 
 import os # To set working directory
-# import numpy as np # Not needed here but often useful 
+# import numpy as np # Not needed here but often useful
 import pandas as pd # To read and inspect data
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt  # To plot regression results
@@ -78,7 +78,7 @@ type(housing)
 housing.dtypes
 
 
-# Inspect a few rows of data. 
+# Inspect a few rows of data.
 housing.head(3)
 housing.tail(3)
 
@@ -91,11 +91,11 @@ housing.columns
 housing.describe()
 
 
-# Drop the observation numbers. 
+# Drop the observation numbers.
 housing = housing.drop('obsn_num', axis = 1)
 
 
-# Display the correlation matrix. 
+# Display the correlation matrix.
 housing.corr()
 
 
@@ -119,13 +119,13 @@ X_1.describe()
 #--------------------------------------------------
 
 # Initialize the regression model object.
-reg_model_1 = LinearRegression()  
+reg_model_1 = LinearRegression()
 
 # Fit the linear regression model.
-reg_model_1.fit(X_1, Y)  
+reg_model_1.fit(X_1, Y)
 
 # Obtain predictions.
-Y_pred_1 = reg_model_1.predict(X_1)  
+Y_pred_1 = reg_model_1.predict(X_1)
 
 
 
@@ -133,7 +133,7 @@ Y_pred_1 = reg_model_1.predict(X_1)
 # Plot the results.
 #--------------------------------------------------
 
-# Plot the regression line with the data. 
+# Plot the regression line with the data.
 plt.scatter(X_1, Y)
 plt.plot(X_1, Y_pred_1, color = 'red')
 plt.xlabel('Income')
@@ -143,11 +143,11 @@ plt.title('Regression of House Price on Income')
 plt.savefig('Reg_Example_1.pdf')
 
 
-# Plot the target variable with the predictions. 
+# Plot the target variable with the predictions.
 plt.scatter(Y_pred_1, Y)
 # Doesn't look very good.
 
-# Let's look at some summary statistics. 
+# Let's look at some summary statistics.
 
 
 #--------------------------------------------------
@@ -165,7 +165,7 @@ r_sq = reg_model_1.score(X_1, Y)
 print('Coefficient of determination:', r_sq)
 
 
-# Other statistics using the sklearn.metrics module. 
+# Other statistics using the sklearn.metrics module.
 
 
 # The mean squared error
@@ -196,13 +196,13 @@ X.describe()
 #--------------------------------------------------
 
 # Initialize the regression model object.
-reg_model_full = LinearRegression()  
+reg_model_full = LinearRegression()
 
 # Fit the linear regression model.
-reg_model_full.fit(X, Y)  
+reg_model_full.fit(X, Y)
 
 # Obtain predictions.
-Y_pred_full = reg_model_full.predict(X)  
+Y_pred_full = reg_model_full.predict(X)
 
 
 
@@ -227,7 +227,7 @@ print('Intercept: %f \n' % reg_model_full.intercept_)
 # Fit the Regression Model (with statsmodels module instead).
 #--------------------------------------------------
 
-# Fit the regression model. 
+# Fit the regression model.
 reg_model_full_sm = sm.ols(formula = "house_price ~ income + in_cali + earthquake", data = housing).fit()
 
 # Display the parameters.
@@ -239,7 +239,7 @@ print(reg_model_full_sm.summary())
 
 
 
-# Compare with univariate approach above. 
+# Compare with univariate approach above.
 reg_model_1_sm = sm.ols(formula = "house_price ~ income", data = housing).fit()
 print(reg_model_1_sm.summary())
 

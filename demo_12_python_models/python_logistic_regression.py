@@ -1,32 +1,32 @@
 # -*- coding: utf-8 -*-
 """
 ##################################################
-# 
-# ECO 5445: Intro to Business Analytics
-# 
+#
+# GEB 6895: Tools for Business Intelligence
+#
 # Data Analysis with Pandas: Linear Regression
-# 
+#
 # Lealand Morin, Ph.D.
 # Assistant Professor
 # Department of Economics
 # College of Business Administration
 # University of Central Florida
-# 
+#
 # October 2, 2019
-# 
+#
 # This script outlies a few approaches to linear regression in python.
 # It uses a sample dataset credit_data.csv with the following variables:
 #   default: 1 if borrower defaulted on a loan
 #   bmaxrate: Maximum rate of interest on any part of the loan
 #   amount: the amount funded on the loan
-#   close: borrower takes the option of closing the listing 
+#   close: borrower takes the option of closing the listing
 #     until it is fully funded
 #   AA: borrowers FICO score greater than 760
 #   A: borrowers FICO score between 720 and 759
 #   B: borrowers FICO score between 680 and 719
 #   C: borrowers FICO score between 640 and 679
 #   D: borrowers FICO score between 600 and 639
-# 
+#
 ##################################################
 """
 
@@ -38,7 +38,7 @@
 
 
 import os # To set working directory
-# import numpy as np # Not needed here but often useful 
+# import numpy as np # Not needed here but often useful
 import pandas as pd # To read and inspect data
 from sklearn.linear_model import LogisticRegression
 import statsmodels.formula.api as sm # Another way to estimate logistic regression
@@ -80,7 +80,7 @@ credit = pd.read_csv('credit_data.csv')
 credit.dtypes
 
 
-# Inspect a few rows of data. 
+# Inspect a few rows of data.
 credit.head(3)
 credit.tail(3)
 
@@ -93,11 +93,11 @@ credit.columns
 credit.describe()
 
 
-# Drop the observation numbers. 
+# Drop the observation numbers.
 # housing = housing.drop('obsn_num', axis = 1)
 
 
-# Display the correlation matrix. 
+# Display the correlation matrix.
 credit.corr()
 
 
@@ -125,17 +125,17 @@ credit.groupby('default').mean()
 logit_model_1 = LogisticRegression()
 
 # Fit the linear regression model.
-# logit_model_1.fit(X_1, Y)  
+# logit_model_1.fit(X_1, Y)
 
 # Obtain predictions.
-# Y_pred_1 = logit_model_1.predict(X_1)  
+# Y_pred_1 = logit_model_1.predict(X_1)
 
 
 
 # Get names of explanatory variables
 X_cols = credit.columns[1:]
 
-# Initialize and specify the logistic model. 
+# Initialize and specify the logistic model.
 logit_model_sm = sm.Logit(credit['default'], credit[X_cols])
 
 # Fit the model.
@@ -155,12 +155,12 @@ print(logit_model_fit_sm.summary())
 # Fit the Logistic Model (with sklearn module).
 #--------------------------------------------------
 
-# Split the data into target and predictor variables. 
+# Split the data into target and predictor variables.
 
 X = credit.loc[:, credit.columns != 'default']
 y = credit.loc[:, credit.columns == 'default']
 
-# Normally would have saved some data for testing but can calculate ROC in sample. 
+# Normally would have saved some data for testing but can calculate ROC in sample.
 
 
 

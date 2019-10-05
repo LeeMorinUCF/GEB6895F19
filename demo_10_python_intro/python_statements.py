@@ -1,19 +1,19 @@
 # -*- coding: utf-8 -*-
 """
 ##################################################
-# 
-# ECO 5445: Intro to Business Analytics
-# 
+#
+# GEB 6895: Tools for Business Intelligence
+#
 # Conditional Statements and Functions in Python
-# 
+#
 # Lealand Morin, Ph.D.
 # Assistant Professor
 # Department of Economics
 # College of Business Administration
 # University of Central Florida
-# 
+#
 # September 24, 2019
-# 
+#
 ##################################################
 """
 
@@ -55,7 +55,7 @@ elif age <= 17 and age > 12:
 # Else, no action.
 
 
-# Determine whether a number is odd or even. 
+# Determine whether a number is odd or even.
 def OddOrEven(number):
     if number % 2 == 0:
         print('even')
@@ -68,9 +68,9 @@ OddOrEven(7)
 
 OddOrEven(100)
 
-# Try this: 
+# Try this:
 OddOrEven(math.pi)
-# What's going on? 
+# What's going on?
 
 math.pi % 2
 
@@ -84,9 +84,9 @@ def OddOrEven_2(number):
             print('odd')
     else:
         print('Input number not an int')
-    
-        
-        
+
+
+
 OddOrEven_2(math.pi)
 
 OddOrEven_2('math.pi')
@@ -104,7 +104,7 @@ def SmallerNumbers(list_in, number):
     for i in list_in:
         if i < number:
             print(i)
-        
+
 
 
 list_in = [1,5,10,89,102]
@@ -160,7 +160,7 @@ range(5, 10) < range(5, 10)
 
 
 [1,6,3] < [5,5,5]
-# What's happening here? 
+# What's happening here?
 
 
 
@@ -197,7 +197,7 @@ a < b == c
 a < b < c
 
 # the operators and and or has an order of operations,
-# with not taking priority and or calculated last. 
+# with not taking priority and or calculated last.
 
 A = True
 B = True
@@ -223,8 +223,8 @@ B = False
 A and not B or C
 (A and (not B)) or C
 
-# The and and or operators are called 'short circuit' operators. 
-# They stop evaluating once the condition value is determined. 
+# The and and or operators are called 'short circuit' operators.
+# They stop evaluating once the condition value is determined.
 
 
 
@@ -232,7 +232,7 @@ A and not B or C
 # Try to make it more efficient.
 def SmallerNumbers(list_in, number):
     number_vec = np.repeat(number, len(list_in))
-    
+
     for i in list_in:
         if i < number:
             print(i)
@@ -243,7 +243,7 @@ np.repeat(5, 3)
 
 
 
-# Using this module: 
+# Using this module:
 # import numpy as np
 
 np.repeat(5, 3)
@@ -261,8 +261,8 @@ def CommonElements(list_1, list_2):
     return new_list
 
 a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] 
-               
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
 CommonElements(a, b)
 
 
@@ -273,7 +273,7 @@ CommonElements(a, b)
 
 
 
-# Maybe it would help to sort the elements first. 
+# Maybe it would help to sort the elements first.
 
 
 for i in reversed(xrange(1,10,2)):
@@ -281,7 +281,7 @@ for i in reversed(xrange(1,10,2)):
 
 
 # Write a simple, working version first,
-# then speed it up and test each version. 
+# then speed it up and test each version.
 # "First you get good, then you get fast."
 
 

@@ -4,7 +4,7 @@
 #
 # ECO 5445: Intro to Business Analytics
 #
-# File Input and Output in Python
+# GEB 6895: Tools for Business Intelligence
 #
 # Lealand Morin, Ph.D.
 # Assistant Professor

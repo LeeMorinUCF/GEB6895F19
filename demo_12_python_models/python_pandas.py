@@ -2,7 +2,7 @@
 """
 ##################################################
 #
-# ECO 5445: Intro to Business Analytics
+# GEB 6895: Tools for Business Intelligence
 #
 # Data Analysis with Pandas
 #
@@ -47,7 +47,7 @@ os.getcwd()
 
 # Need to add content here.
 
-# Just jump into regression models instead. 
+# Just jump into regression models instead.
 
 
 ##################################################

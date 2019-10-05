@@ -1,29 +1,29 @@
 # -*- coding: utf-8 -*-
 """
 ##################################################
-# 
-# ECO 5445: Intro to Business Analytics
-# 
+#
+# GEB 6895: Tools for Business Intelligence
+#
 # Introduction to the Python Environment
-# 
+#
 # Lealand Morin, Ph.D.
 # Assistant Professor
 # Department of Economics
 # College of Business Administration
 # University of Central Florida
-# 
+#
 # September 24, 2019
-# 
+#
 ##################################################
 """
 
 
 '''
 This is a comment.
-Be a good citizen and inform your users. 
+Be a good citizen and inform your users.
 '''
 
-# This is another comment. 
+# This is another comment.
 
 
 ##################################################
@@ -187,9 +187,9 @@ import super_long_package_name as s
 
 s.function(whatever)
 
-# There is such a thing as being too concise. 
+# There is such a thing as being too concise.
 
-# But there is also such a thing as being too verbose. 
+# But there is also such a thing as being too verbose.
 
 import math as super_long_package_name
 
@@ -202,13 +202,13 @@ x.e
 
 # Try to make your abbreviations informative.
 
-# Some modules have standard abbreviations; go with convention. 
+# Some modules have standard abbreviations; go with convention.
 
 import numpy as np
 
 import pandas as pd
 
-# ... and for a real script (not a demo) declare your modules 
+# ... and for a real script (not a demo) declare your modules
 # at the top of the script.
 
 
@@ -319,7 +319,7 @@ def FeetToMetres2(feet):
 
 FeetToMetres2(10)
 
-# Can you find the mistake? 
+# Can you find the mistake?
 
 
 # Try this:
@@ -329,10 +329,9 @@ FeetToMetres(10)
 FeetToMetres2(10)
 
 # Surprised?
-# What's going on? 
+# What's going on?
 
 
 ##################################################
 # End
 ##################################################
-
