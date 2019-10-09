@@ -128,7 +128,7 @@ summary(lm_no_earthquakes)
 
 # Store predictions for the entire dataset (both training and testing)
 # based on the model built on only the training dataset. 
-housing_data[, 'prediction'] <- predict(lm_no_earthquakes, 
+housing_data[, 'pred_no_earthquakes'] <- predict(lm_no_earthquakes, 
                                         newdata = housing_data) # All observations, including testing sample. 
 
 
@@ -141,13 +141,12 @@ housing_data[, 'prediction'] <- predict(lm_no_earthquakes,
 # Estimate a regression model.
 lm_testing_model_1 <- lm(data = housing_data[!obsns_for_estimation, ], 
                     # Notice only second set of observations (testing dataset).
-                    formula = house_price ~ prediction + in_cali + earthquake)
+                    formula = house_price ~ pred_no_earthquakes + in_cali + earthquake)
 # Dropped income because of multicollinearity. 
 # Want to test accuracy for california and relevance of earthquakes.
 
 # Output the results to screen.
 summary(lm_testing_model_1)
-
 
 
 
@@ -176,6 +175,90 @@ summary(lm_testing_model_1)
 # Compare the results with the test of the incorrect model above.
 # 
 ##################################################
+
+
+##################################################
+# Estimating the Regression Model
+# Model 2: Full Model, with no omitted variable
+# We know from the parameter values that this is the correct model
+# but we can use it to demonstrate the approach to model testing. 
+##################################################
+
+
+# Estimate a regression model.
+lm_full_model <- lm(data = housing_data[obsns_for_estimation, ], 
+                    # Notice only first set of observations (training dataset).
+                    formula = house_price ~ income + in_cali + earthquake) 
+
+# Output the results to screen.
+summary(lm_full_model)
+
+
+# Store predictions for the entire dataset (both training and testing)
+# based on the model built on only the training dataset. 
+housing_data[, 'prediction_full'] <- predict(lm_full_model, 
+                                             newdata = housing_data) # All observations, including testing sample. 
+
+
+##################################################
+# Testing the Regression Model
+# Model 2: Full Model, with no omitted variable
+# Note that the prediction is also included
+##################################################
+
+# Estimate a regression model.
+lm_testing_full_model_1 <- lm(data = housing_data[!obsns_for_estimation, ], 
+                              # Notice only second set of observations (testing dataset).
+                              formula = house_price ~ prediction_full + in_cali + earthquake)
+# Dropped income because of multicollinearity. 
+# Want to test accuracy for california and relevance of earthquakes.
+
+# Output the results to screen.
+summary(lm_testing_full_model_1)
+
+
+
+##################################################
+# Bonus round: Notice what happened above. 
+# Try a different version of the testing model.
+# Subract predictions from actual house prices.
+# Use the difference as the regressand. 
+##################################################
+
+housing_data[, 'prediction_diff_full']  <- housing_data[, 'house_price'] -
+  housing_data[, 'prediction_full'] # Preditions from full model. 
+
+# Estimate a regression model.
+lm_testing_full_model_2 <- lm(data = housing_data[!obsns_for_estimation, ], 
+                              # Notice only second set of observations (testing dataset).
+                              formula = prediction_diff_full ~ income + in_cali + earthquake)
+
+
+# Output the results to screen.
+summary(lm_testing_full_model_2)
+
+
+
+##################################################
+# 
+# Exercise 3:
+# 
+# Observe the values of the coefficients for california and earthquakes.
+# Then compare these to the bias recorded for the first (misspecified) regression.
+# 
+##################################################
+
+
+housing_data[, 'prediction_diff']  <- housing_data[, 'house_price'] -
+  housing_data[, 'prediction'] # Preditions from full model. 
+
+# Estimate a regression model.
+lm_testing_no_earthquakes_2 <- lm(data = housing_data[!obsns_for_estimation, ], 
+                                  # Notice only second set of observations (testing dataset).
+                                  formula = prediction_diff ~ income + in_cali + earthquake)
+
+
+summary(lm_testing_no_earthquakes_2)
 
 
 

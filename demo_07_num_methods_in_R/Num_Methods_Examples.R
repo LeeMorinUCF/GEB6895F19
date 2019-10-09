@@ -35,6 +35,7 @@ rm(list=ls(all=TRUE))
 # Set working directory.
 # The '<-' operator denotes right-to-left assignment.
 wd_path <- '/path/to/your/folder'
+wd_path <- '~/Teaching/GEB6895_Fall_2019/GitRepos/demo_07_num_methods_in_R' # On Windows
 setwd(wd_path)
 
 
