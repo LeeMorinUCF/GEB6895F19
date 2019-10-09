@@ -191,7 +191,9 @@ library(rootSolve)
 model <- function(x) c(F1 = x[1]^2+ x[2]^2 -1, 
                        F2 = x[1]^2- x[2]^2 +0.5)
 
-(ss <- multiroot(f = model, start = c(1, 1)))
+ss <- multiroot(f = model, start = c(1, 1))
+
+
 
 ## =======================================================================
 ## example 2
@@ -203,11 +205,11 @@ model <- function(x) c(F1 = x[1] + x[2] + x[3]^2 - 12,
                        F3 = 2 * x[1] - x[2]^2 + x[3] - 1 )
 
 # first solution
-(ss <- multiroot(model, c(1, 1, 1), useFortran = FALSE))
-(ss <- multiroot(f = model, start = c(1, 1, 1)))
+ss <- multiroot(model, c(1, 1, 1), useFortran = FALSE)
+ss <- multiroot(f = model, start = c(1, 1, 1))
 
 # second solution; use different start values
-(ss <- multiroot(model, c(0, 0, 0)))
+ss <- multiroot(model, c(0, 0, 0))
 model(ss$root)
 
 
@@ -298,8 +300,10 @@ optim(c(-1.2,1), fr, grr, method = "L-BFGS-B")
 
 
 
-flb <- function(x)
-{ p <- length(x); sum(c(1, rep(4, p-1)) * (x - c(1, x[-p])^2)^2) }
+flb <- function(x) { 
+  p <- length(x); sum(c(1, rep(4, p-1)) * (x - c(1, x[-p])^2)^2) 
+}
+
 ## 25-dimensional box constrained
 optim(rep(3, 25), flb, NULL, method = "L-BFGS-B",
       lower = rep(2, 25), upper = rep(4, 25)) # par[24] is *not* at boundary
@@ -307,15 +311,18 @@ optim(rep(3, 25), flb, NULL, method = "L-BFGS-B",
 
 # "wild" function , global minimum at about -15.81515
 
-fw <- function (x)
+fw <- function (x) {
   10*sin(0.3*x)*sin(1.3*x^2) + 0.00001*x^4 + 0.2*x+80
+}
 plot(fw, -50, 50, n = 1000, main = "optim() minimising 'wild function'")
 
 res <- optim(50, fw, method = "SANN",
              control = list(maxit = 20000, temp = 20, parscale = 20))
 res
 ## Now improve locally {typically only by a small bit}:
-(r2 <- optim(res$par, fw, method = "BFGS"))
+r2 <- optim(res$par, fw, method = "BFGS")
+
+
 points(r2$par,  r2$value,  pch = 8, col = "red", cex = 2)
 
 ################################################################################
