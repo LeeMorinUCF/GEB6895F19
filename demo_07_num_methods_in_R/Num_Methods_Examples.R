@@ -76,11 +76,15 @@ det(A)
 
 # Now use the solve function to solve for x.
 x_soln <- solve(A, b)
+# Example: In OLS beta_hat <- solve(A, b)
 
 
 # Compare with the original x:
 x
 x_soln
+
+# Using the inverse:
+x_soln_2 <- A_inv %*% b
 
 
 #--------------------------------------------------
@@ -123,6 +127,10 @@ x_1_soln_w_inv <- A_1_inv %*% b_1
 f <- function(x) log(x) - exp(-x)
 # That is, find the x at which this function is zero.
 
+x_grid <- seq(0.1, 2.0, by = 0.01)
+plot(x_grid, f(x_grid))
+
+
 # Solution:
 f_soln <- uniroot(f, c(0, 2), tol = 0.0001)
 f_soln
@@ -152,15 +160,32 @@ lines(rep(f_with_a_soln$root, length(x_grid)),
 # Handheld calculator example: fixed point of cos(.):
 uniroot(function(x) {cos(x) - x}, lower = -pi, upper = pi, tol = 1e-9)$root
 # Compare with fewer decimal points of accuracy. 
-uniroot(function(x) {cos(x) - x}, lower = -pi, upper = pi, tol = 0.0001)$root
+uniroot(function(x) {cos(x) - x}, lower = -pi, upper = pi, tol = 0.001)$root
 
 
 
 # Two additional parameters. 
 f2_with_ab <- function (x, a, b) {(x - a)^2 - b}
-f2_with_ab_soln <- uniroot(f2_with_ab, c(0, 4), tol = 0.0001, 
+f2_with_ab_soln <- uniroot(f2_with_ab, interval = c(-100, 4), tol = 0.0001, 
                            a = 3, b = 4)
 f2_with_ab_soln
+
+
+# Giving it other directions.
+f2_with_ab_other_soln <- uniroot(f2_with_ab, interval = c(3, 10), tol = 0.0001, 
+                                 a = 3, b = 4)
+f2_with_ab_other_soln
+
+# Giving it the wrong directions.
+f2_with_ab_wrong_soln <- uniroot(f2_with_ab, interval = c(6, 10), tol = 0.0001, 
+                                 a = 3, b = 4)
+f2_with_ab_wrong_soln
+
+
+# Giving it the wrong directions.
+f2_with_ab_multiple_soln <- uniroot(f2_with_ab, interval = c(0, 10), tol = 0.0001, 
+                                 a = 3, b = 4)
+f2_with_ab_multiple_soln
 
 
 # Plot. 
@@ -182,6 +207,7 @@ lines(rep(f2_with_ab_soln$root, length(x_grid)),
 # Multiple variable equations
 #--------------------------------------------------
 
+# install.packages('rootSolve')
 library(rootSolve)
 
 ## =======================================================================
@@ -191,6 +217,20 @@ library(rootSolve)
 
 model <- function(x) c(F1 = x[1]^2+ x[2]^2 -1, 
                        F2 = x[1]^2- x[2]^2 +0.5)
+
+
+model_2 <- function(x) { 
+  
+  F1 <- x[1]^2+ x[2]^2 -1 
+  F2 <- x[1]^2- x[2]^2 +0.5
+  
+  return(c(F1 = F1, F2 = F2))
+}
+
+
+model(x = c(1, 2))
+model_2(x = c(1, 2))
+model_2(x = c(1, 1))
 
 ss <- multiroot(f = model, start = c(1, 1))
 
@@ -204,6 +244,10 @@ ss <- multiroot(f = model, start = c(1, 1))
 model <- function(x) c(F1 = x[1] + x[2] + x[3]^2 - 12,
                        F2 = x[1]^2 - x[2] + x[3] - 2,
                        F3 = 2 * x[1] - x[2]^2 + x[3] - 1 )
+
+model(c(1, 1, 1))
+model(c(0, 0, 0))
+model(c(1, 2, 3))
 
 # first solution
 ss <- multiroot(model, c(1, 1, 1), useFortran = FALSE)
@@ -224,10 +268,24 @@ model2 <- function(x, parms)
     F2 = x[1]^2 - x[2] + x[3] - parms[2],
     F3 = 2 * x[1] - x[2]^2 + x[3] - parms[3])
 
-# first solution
+# Set parameter values.
 parms <- c(12, 2, 1)
+
+# Test values.
+model2(c(1, 1, 1), parms)
+
+
+# Sole the system.
 multiroot(model2, c(1, 1, 1), parms = parms)
+
+
+
+# Try another problem with different parameter values
+# (and different starting values).
+model2(c(0, 0, 0), parms*2)
 multiroot(model2, c(0, 0, 0), parms = parms*2)
+
+
 
 ## =======================================================================
 ## example 3: find a matrix
@@ -284,14 +342,18 @@ fr <- function(x) {   ## Rosenbrock Banana function
   x2 <- x[2]
   100 * (x2 - x1 * x1)^2 + (1 - x1)^2
 }
+# Gradient means a vector of first derivatives. 
 grr <- function(x) { ## Gradient of 'fr'
   x1 <- x[1]
   x2 <- x[2]
-  c(-400 * x1 * (x2 - x1 * x1) - 2 * (1 - x1),
-    200 *      (x2 - x1 * x1))
+  c(-400 * x1 * (x2 - x1 * x1) - 2 * (1 - x1), # Dx_1
+    200 *      (x2 - x1 * x1))# Dx_2
 }
 
+# Optimize the function itself.
 optim(c(-1.2,1), fr)
+
+# Optimize with vector of derivatives.
 res <- optim(c(-1.2,1), fr, grr, method = "BFGS")
 
 # Compare with other algorithms:
