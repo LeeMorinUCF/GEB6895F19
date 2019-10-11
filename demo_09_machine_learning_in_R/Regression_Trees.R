@@ -1,6 +1,6 @@
 ##################################################
 # 
-# ECO 5445: Introduction to Business Analytics
+# GEB 6895: Tools for Business Intelligence
 # 
 # Regression Tree Demo
 # Data Mining over many Irrelevant Variables
