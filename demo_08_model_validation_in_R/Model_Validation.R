@@ -250,7 +250,7 @@ summary(lm_testing_full_model_2)
 
 
 housing_data[, 'prediction_diff']  <- housing_data[, 'house_price'] -
-  housing_data[, 'prediction'] # Preditions from full model. 
+    housing_data[, 'pred_no_earthquakes'] # Preditions from the no esarthquakes model. 
 
 # Estimate a regression model.
 lm_testing_no_earthquakes_2 <- lm(data = housing_data[!obsns_for_estimation, ], 
