@@ -146,6 +146,26 @@ sqrt(ssr(beta_test_ssr, y, x)/8)
 # Draw several lines for fixed values of beta_0, 
 # with candidate values of beta_1 on the horizontal axis.
 
+
+# An example of one such line:
+beta_0_plot <- 26
+beta_1_plot <- seq(-0.7, -1.3, by = 0.01)
+# Calculate corresponding values of SSR:
+
+for (i in 1:length(beta_1_plot)) {
+  
+  beta_test_ssr_plot <- c(beta_0_plot, beta_1_plot[i])
+  ssr_plot[i] <- ssr(beta_test_ssr_plot, y, x)
+}
+
+# Now plot this line. 
+plot(beta_1_plot, ssr_plot)
+# Repeat for a few other values of beta_0_plot
+# and add to the plot with lines().
+
+
+
+
 # Verify that the maximum is at the beta_hat estimate.
 
 
