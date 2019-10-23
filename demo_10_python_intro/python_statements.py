@@ -33,6 +33,11 @@ import numpy as np
 ##################################################
 
 
+
+#--------------------------------------------------
+# if statements
+#--------------------------------------------------
+
 age = 17
 
 if age > 17:
@@ -91,7 +96,9 @@ OddOrEven_2(math.pi)
 
 OddOrEven_2('math.pi')
 
+#--------------------------------------------------
 # for loops
+#--------------------------------------------------
 
 
 words = ['cat', 'window', 'defenestrate']
@@ -140,10 +147,41 @@ for value in raw_data:
 filtered_data
 
 
+#--------------------------------------------------
+# while loops
+#--------------------------------------------------
+
+i = 5
+while i > 0:
+  i -= 1
+  print('i = %d' % i)
+  print("Inside the loop")
 
 
 
+
+i = 5
+while i > 0:
+  i -= 1
+  print('i = %d' % i)
+  if i == 3:
+      break
+  print("Inside the loop")
+
+
+
+while True:
+  usr_command = input("Enter your command: ")
+  if usr_command == "quit":
+    break
+  else:
+    print("You typed " + usr_command)
+
+
+
+##################################################
 # Experimenting with boolean variables.
+##################################################
 
 list_in <= 7
 
