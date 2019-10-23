@@ -249,6 +249,9 @@ print('Standard Deviations of the coefficients are:')
 sapply(reg_results[, full_list_of_variables], sd)
 
 
+# Compare these to the standard deviations of the variables.
+sapply(housing_data[, full_list_of_variables[2:4]], sd)
+
 
 ##################################################
 # End
