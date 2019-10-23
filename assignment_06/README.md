@@ -5,18 +5,18 @@
 <img src="newtons-method-formula.png" width="500">
 
 
-<img src="newtons-method-1st-iteration.png" width="500">
+<img src="newtons-method-1st-iteration.png" width="1000">
 
 
-<img src="newtons-method-iterations.png" width="500">
+<img src="newtons-method-iterations.png" width="1000">
 
 
 
-## Bissection Method
+## Bisection Method
 
-<img src="newtons-method-formula.png" width="500">
+<img src="bisection-interval.gif" width="1000">
 
-<img src="newtons-method-formula.png" width="500">
+<img src="bisection-iterations.jpg" width="1000">
 
 
 
