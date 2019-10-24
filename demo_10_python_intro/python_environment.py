@@ -39,19 +39,23 @@ x = 2
 x**2
 
 
+
 x = 3
 
 x = 'string'
 
 print x
 
+print X
+
 
 
 x[2]
 
-
+x[0]
 
 x[-3]
+x[-1]
 
 
 
@@ -60,6 +64,11 @@ x[2] = 'x'
 
 
 x = x[0:2] + 'x' + x[3:7]
+print x
+
+
+
+x[3:20]
 
 
 
@@ -91,6 +100,11 @@ boolean_ind = x == 5
 
 
 
+other_boolean_ind = x != 5
+
+yet_another_boolean_ind = not x == 5
+
+
 z = 3/5
 
 type(x)
@@ -116,13 +130,21 @@ type(z2)
 # Arrays
 
 a = [[1, 2, 3], [4, 5, 6]]
+# a = [[1, 2, 3], [4, 5, 'a']]
+
+print a
+
 print(a[0])
 print(a[1])
 print(a[0][1])
 print(a[1][2])
 
 
+a[1][2] = float('nan')
+
 10 in a
+
+10 in [10, 3, 5]
 
 6 in a
 
@@ -168,6 +190,8 @@ math.e**math.log(7)
 must_be_true = math.e**math.log(7) == 7
 
 
+
+must_be_true = (math.e**math.log(7) - 7) < 0.0000001
 
 
 # You can choose your own abbreviations for modules

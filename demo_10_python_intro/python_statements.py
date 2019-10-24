@@ -48,6 +48,8 @@ else:
    print("can only see rated PG movies")
 
 
+if 7 < 4:
+    print 'not true'
 
 
 age = 1
@@ -78,6 +80,8 @@ OddOrEven(math.pi)
 # What's going on?
 
 math.pi % 2
+
+46 % 5
 
 
 def OddOrEven_2(number):
