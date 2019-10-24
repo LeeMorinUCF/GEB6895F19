@@ -33,12 +33,13 @@
 rm(list=ls(all=TRUE))
 
 # Set working directory.
-wd_path <- '/path/to/your/folder' 
+# wd_path <- '/path/to/your/folder' 
 
-setwd(wd_path)
+# setwd(wd_path)
 
 # Or do this in one step (using buttons in  File panel).
-setwd("~/path/to/your/folder")
+# setwd("~/path/to/your/folder")
+setwd("~/Teaching/GEB6895_Fall_2019/GitRepos/assignment_05")
 
 # No libraries required.
 # Otherwise would have a command like the following.

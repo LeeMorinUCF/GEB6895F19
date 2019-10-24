@@ -31,12 +31,13 @@
 rm(list=ls(all=TRUE))
 
 # Set working directory.
-wd_path <- '/path/to/your/folder' 
+# wd_path <- '/path/to/your/folder' 
 
-setwd(wd_path)
+# setwd(wd_path)
 
 # Or do this in one step (using buttons in  File panel).
-setwd("~/path/to/your/folder")
+# setwd("~/path/to/your/folder")
+setwd("~/Teaching/GEB6895_Fall_2019/GitRepos/assignment_05")
 
 # Read function for sampling data. 
 source('House_Price_Sim_Data.R')
@@ -119,6 +120,7 @@ housing_data[, 'income_2'] <- 0
 housing_data[, 'income_2'] <- housing_data[, 'income'] + 
   rnorm(n = num_obs, mean = 0, sd = measurement_error_income)
 
+plot(housing_data[, 'income'], housing_data[, 'income_1'])
 
 ##################################################
 # Running a Simulation
@@ -126,8 +128,8 @@ housing_data[, 'income_2'] <- housing_data[, 'income'] +
 ##################################################
 
 # Set the list of variables for the estimation. 
-list_of_variables <- c('income', 'in_cali', 'earthquake')
-# list_of_variables <- c('income_1', 'in_cali', 'earthquake')
+# list_of_variables <- c('income', 'in_cali', 'earthquake')
+list_of_variables <- c('income_1', 'in_cali', 'earthquake')
 
 # Add beta_0 to the beginning for the full list.
 full_list_of_variables <- c('intercept', list_of_variables)
