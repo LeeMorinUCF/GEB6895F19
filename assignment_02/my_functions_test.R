@@ -94,10 +94,14 @@ multiples_of_5(n = 200)
 # Example 5
 #--------------------------------------------------------------------------------
 
-count_even_numbers(end_num = 10)
-count_even_numbers(end_num = 100)
-count_even_numbers(end_num = 0)
-count_even_numbers(end_num = 22)
+# count_even_numbers(end_num = 10)
+count_even_numbers(10)
+# count_even_numbers(end_num = 100)
+count_even_numbers(100)
+# count_even_numbers(end_num = 0)
+count_even_numbers(0)
+# count_even_numbers(end_num = 22)
+count_even_numbers(22)
 
 #--------------------------------------------------------------------------------
 # Example 6
