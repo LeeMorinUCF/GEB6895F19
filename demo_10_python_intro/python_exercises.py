@@ -19,6 +19,14 @@
 """
 
 
+##################################################
+# Import Modules.
+##################################################
+
+
+import math
+import numpy as np
+
 
 ##################################################
 # Conditional Statements.
@@ -131,9 +139,81 @@ else:
 # Write a function that calculates the factorial of an integer n.
 
 # First use a for loop. 
+def factorial(n):
+    product = 1
+    for i in range(1,n+1):
+        product = product*i
+        
+    print "I'm not finished yet"
+    return product
+    print "I'm finished"
+
+
+
+
+print(factorial(5))
+
+
+print(factorial(math.pi))
+
+
+def factorial_2(n):
+    product = 1
+    i = 1
+    while i <= n:
+        product = product*i
+        i = i + 1
+    return product
+
+
+print(factorial_2(3))
+print(factorial_2(math.pi))
+print(factorial_2(3.99999))
+
+print(factorial_2(1))
+print(factorial_2(2))
+print(factorial_2(3))
+print(factorial_2(4))
+
 
 
 # Next use the recursive approach, as in P&G p.167.
+def factorial_3(n):
+    if n == 1:
+        product = 1
+    else:
+        product = n*factorial_3(n - 1)
+    
+    return product
+
+print(factorial_3(1))
+print(factorial_3(2))
+print(factorial_3(3))
+print(factorial_3(4))
+
+
+print(factorial_3(975))
+print(factorial_3(980))
+print(factorial_3(1000))
+
+
+
+
+print(factorial(500))
+print(factorial(600))
+print(factorial(10000))
+
+print( (factorial(10000) + 7)/factorial(10000)*1000000 )
+
+print( (factorial(10000) + 7))
+
+a = (factorial(10000) + 7)
+b = a - 7
+print b
+
+
+print(b - factorial(10000))
+
 
 
 
