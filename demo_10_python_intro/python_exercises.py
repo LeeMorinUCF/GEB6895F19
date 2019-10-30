@@ -123,6 +123,21 @@ else:
 # ... continued...
 
 
+
+##################################################
+# Exercise: Factorial.
+##################################################
+
+# Write a function that calculates the factorial of an integer n.
+
+# First use a for loop. 
+
+
+# Next use the recursive approach, as in P&G p.167.
+
+
+
+
 ##################################################
 # Exercise: Fibonacci sequence.
 ##################################################
@@ -143,15 +158,16 @@ def Fibonacci(n):
     print(fib_list)
 
 
+# Some of the ingredients:
 range(5) + 1
 
+
+# Testing the parts of the recurrence equation:
 fib_list = [1,2,3,4]
 fib_list[(len(fib_list) -2) : len(fib_list)]
 
-
+# Testing:
 Fibonacci(5)
-
-sum([])
 
 
 Fibonacci(20)
