@@ -10,7 +10,7 @@
 
 ## Secant Method
 
-<img src="secant_method_formula.png" width="1000">
+<img src="secant_method_formula.png" width="500">
 
 <img src="Secant_method.png" width="1000">
 
