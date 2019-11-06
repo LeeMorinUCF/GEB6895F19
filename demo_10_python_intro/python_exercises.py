@@ -207,8 +207,9 @@ print( (factorial(10000) + 7)/factorial(10000)*1000000 )
 
 print( (factorial(10000) + 7))
 
+
 a = (factorial(10000) + 7)
-b = a - 7
+b = a - factorial(10000)
 print b
 
 

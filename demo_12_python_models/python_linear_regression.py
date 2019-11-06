@@ -51,10 +51,9 @@ import statsmodels.formula.api as sm # Another way to estimate linear regression
 # Find out the current directory.
 os.getcwd()
 # Change to a new directory.
-os.chdir('C:\\Users\\le279259\\Documents\\Teaching\\ECO5445_Fall2019\\GitRepos\\Original\\ECO5445F19\\demo_10_python_models')
+os.chdir('C:\\Users\\le279259\\Documents\\Teaching\\GEB6895_Fall_2019\\GitRepos\\demo_12_python_models')
 # Check that the change was successful.
 os.getcwd()
-
 
 
 ##################################################
