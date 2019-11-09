@@ -30,7 +30,7 @@
 ##################################################
 """
 
-
+# from __future__ import division
 
 ##################################################
 # Import Modules.
@@ -41,7 +41,10 @@ import os # To set working directory
 # import numpy as np # Not needed here but often useful
 import pandas as pd # To read and inspect data
 from sklearn.linear_model import LogisticRegression
-import statsmodels.formula.api as sm # Another way to estimate logistic regression
+
+import statsmodels.formula.api as smf # Another way to estimate logistic regression
+import statsmodels.api as sm # Another way to estimate logistic regression
+
 import matplotlib.pyplot as plt  # To plot regression results
 import seaborn as sns # Another package for plotting data
 sns.set(style="white")
