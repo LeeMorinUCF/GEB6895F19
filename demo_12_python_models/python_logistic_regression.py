@@ -92,6 +92,9 @@ credit.columns
 # Calculate summary statistics for your data.
 credit.describe()
 
+# Look at a few variables at a time.
+credit[['bmaxrate','amount','close','bankcardutil']].describe()
+credit[['AA','A','B','C']].describe()
 
 # Drop the observation numbers.
 # housing = housing.drop('obsn_num', axis = 1)
@@ -99,7 +102,9 @@ credit.describe()
 
 # Display the correlation matrix.
 credit.corr()
-
+# Look at a few variables at a time.
+credit[['default','bmaxrate','amount','close','bankcardutil']].corr()
+credit[['default','AA','A','B','C']].corr()
 
 # Inspect the target variable.
 credit['default'].value_counts()
@@ -111,6 +116,10 @@ sns.countplot(x = 'default', data = credit, palette = 'hls')
 # Verify that data differs by default status.
 credit.groupby('default').mean()
 
+# Look at a few variables at a time.
+credit[['default','bmaxrate','amount','close','bankcardutil']].groupby('default').mean()
+credit[['default','AA','A','B','C']].groupby('default').mean()
+
 
 ##################################################
 # Logistic Regression.
@@ -120,16 +129,6 @@ credit.groupby('default').mean()
 #--------------------------------------------------
 # Fit the Logistic Model (with statsmodels module).
 #--------------------------------------------------
-
-# Initialize the regression model object.
-logit_model_1 = LogisticRegression()
-
-# Fit the linear regression model.
-# logit_model_1.fit(X_1, Y)
-
-# Obtain predictions.
-# Y_pred_1 = logit_model_1.predict(X_1)
-
 
 
 # Get names of explanatory variables

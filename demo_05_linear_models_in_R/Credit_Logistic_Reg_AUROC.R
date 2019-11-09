@@ -80,6 +80,12 @@ cor(credit_data[, c('bmaxrate', 'AA', 'A', 'B', 'C', 'D')])
 
 
 
+# Compare the distributions of variables 
+# for classes of the dependent variable. 
+summary(credit_data[credit_data[, 'default'] == 0, ])
+summary(credit_data[credit_data[, 'default'] == 1, ])
+
+
 ##################################################
 # Generating New Variables
 ##################################################
