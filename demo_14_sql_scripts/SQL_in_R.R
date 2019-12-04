@@ -78,6 +78,11 @@ sqldf('SELECT * FROM Auctions;')
 sqldf('SELECT * FROM Bidders;')
 sqldf('SELECT * FROM Bids;')
 
+# Output the data frame.
+bid_df <- sqldf('SELECT * FROM Bids;')
+write.csv(bid_df, file = 'copy_of_bids_table.csv')
+
+
 # Execute queries with aggregation.
 sqldf('SELECT 
         AVG(bids.Bid) AS AverageBid
@@ -194,7 +199,6 @@ query_1[11:20]
 
 # Execute the query, after collapsing into a single line.
 sqldf(paste(query_1[11:20], collapse = ' '))
-
 
 
 # Read and execute the next query.

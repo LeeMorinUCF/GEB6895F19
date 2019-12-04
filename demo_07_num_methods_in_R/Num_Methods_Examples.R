@@ -1,7 +1,7 @@
 
 ################################################################################
 # 
-# GEB 6895: Tools for Business Intelligence
+# GEB 6895: Business Intelligence
 # Examples of Numerical Methods in R
 # 
 # Lealand Morin, Ph.D.
@@ -33,10 +33,9 @@ rm(list=ls(all=TRUE))
 
 
 # Set working directory.
-# The '<-' operator denotes right-to-left assignment.
-wd_path <- '/path/to/your/folder'
-wd_path <- '~/Teaching/GEB6895_Fall_2019/GitRepos/demo_07_num_methods_in_R' # On Windows
-setwd(wd_path)
+# wd_path <- '/path/to/your/folder' 
+# Not required, since this program does not interact with other files.
+# setwd(wd_path)
 
 
 
