@@ -145,6 +145,8 @@ res_dfp = minimize(rosen, x0, method='powell',
                options={'xtol': 1e-8, 'disp': True})
 
 print(res_dfp.x)
+print(res_dfp.fun)
+print(rosen(res_dfp.x))
 
 #--------------------------------------------------
 # Broyden-Fletcher-Goldfarb-Shanno algorithm (BFGS)
@@ -167,6 +169,8 @@ res_bfgs = minimize(rosen, x0, method='BFGS', jac=rosen_der,
                     options={'disp': True})
 
 print(res_bfgs.x)
+print(res_bfgs.fun)
+print(rosen(res_bfgs.x))
 
 
 #--------------------------------------------------
@@ -192,6 +196,8 @@ res_ncg = minimize(rosen, x0, method='Newton-CG',
                options={'xtol': 1e-8, 'disp': True})
 
 print(res_ncg.x)
+print(res_ncg.fun)
+print(rosen(res_ncg.x))
 
 
 
@@ -215,27 +221,12 @@ res_hp = minimize(rosen, x0, method='Newton-CG',
                   options={'xtol': 1e-8, 'disp': True})
 
 print(res_hp.x)
+print(res_hp.fun)
+print(rosen(res_hp.x))
 
 
 
 # ... and many more ...
-
-
-##################################################
-# Constrained optimization
-##################################################
-
-# Setting constraints on the individual parameters.
-bounds = Bounds([0, -0.5], [1.0, 2.0])
-
-# For linear constraints, specify a matrix so that the 
-# Linar combination of the parameter vector satisfies the following bounds.
-linear_constraint = LinearConstraint([[1, 2], [2, 1]], [-np.inf, 1], [1, 1])
-# Notice that np.inf allows for one-sided inequalities. 
-
-
-# ...to be continued...
-
 
 
 
