@@ -74,6 +74,27 @@ lm_model <- lm(data = agg_data,
 # Output the results to screen.
 summary(lm_model)
 
+# My answers:
+# lm(formula = income ~ agg_pct, data = agg_data)
+# 
+# Residuals:
+#   Min      1Q  Median      3Q     Max
+# -3.1002 -2.3142  0.0905  1.8765  3.8044
+# 
+# Coefficients:
+#   Estimate Std. Error t value Pr(>|t|)
+# (Intercept)  26.5770     3.0685   8.661 2.45e-05 ***
+#   agg_pct      -1.0954     0.4156  -2.635   0.0299 *
+#   ---
+#   Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+# 
+# Residual standard error: 2.658 on 8 degrees of freedom
+# Multiple R-squared:  0.4647,	Adjusted R-squared:  0.3978
+# F-statistic: 6.945 on 1 and 8 DF,  p-value: 0.02993
+# 
+# >
+# beta_1 is -1.09
+
 # Store the slope coefficient. 
 beta_1_hat_lm <- summary(lm_model)$coefficients['agg_pct', 'Estimate']
 beta_1_hat_lm <- coef(lm_model)['agg_pct']

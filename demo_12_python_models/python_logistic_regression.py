@@ -4,7 +4,7 @@
 #
 # GEB 6895: Tools for Business Intelligence
 #
-# Data Analysis with Pandas: Linear Regression
+# Data Analysis with Pandas: Logistic Regression
 #
 # Lealand Morin, Ph.D.
 # Assistant Professor
