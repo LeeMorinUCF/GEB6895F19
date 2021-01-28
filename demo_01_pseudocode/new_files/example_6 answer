@@ -1,0 +1,33 @@
+# Example 6: Write pseudo code that will perform the following.
+a) Read in 5 separate numbers.
+b) Calculate the average of the five numbers.
+c) Find the smallest (minimum) and largest (maximum) of the five entered numbers.
+d) Write out the results found from steps b and c with a message describing what they are
+
+Read 5,10,15,20,25
+Set avg to (5+10+15+20+25)/5
+If(5 < 10)
+ Set max to 10
+Else
+ Set max to 5
+If(15 > max)
+ Set max to 15
+If(20 > max)
+ Set max to 20
+If(25 > max)
+Set max to 25
+Write "The max is"
+Write max
+
+
+If(5 < 10)
+ Set min to 5
+Else
+ Set min to 5
+If(15 < min)
+ Set min to 15
+If(20 < min)
+ Set min to 20
+If(25 < min)
+Set min to 25
+Write "The min is"

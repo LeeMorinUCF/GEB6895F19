@@ -1,0 +1,31 @@
+### EXAMPLE 1
+
+x = 2;
+y = 3;
+Product = x*y
+print(Product)
+
+
+
+### EXAMPLE 2
+
+Input x
+if(x = 5,print('5'),'Not 5')
+
+
+
+### EXAMPLE 3
+
+print('Enter a number for y')
+if(
+  and(y > 0, y < 10),
+  print('blue'),
+  if(and(y > 10, y < 20),
+     print('red'),
+     if(and(y > 20, y < 30),
+        print('green'),
+        print('That is not a correct color option.')
+        )
+     )
+  )
+  
