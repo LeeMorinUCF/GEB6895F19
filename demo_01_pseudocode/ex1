@@ -1,0 +1,7 @@
+initiate variable x,y,z
+
+print('pick the first number to be multiplied'), set = x
+print('pick the second  number to be multiplied'), set = y
+
+z=x*y
+print('z')

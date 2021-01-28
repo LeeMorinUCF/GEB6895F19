@@ -1,0 +1,8 @@
+initialize variable x
+
+print('enter a number'), set result to x
+
+if x = 5 or x = 6
+  print('number is 5 or 6')
+else
+  print('number isn't 5 or 6')
