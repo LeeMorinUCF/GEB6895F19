@@ -1,0 +1,6 @@
+# Write pseudo code that reads two numbers and multiplies them together and print out their product
+
+x = 5
+y = 6
+sum = x * y
+print(sum)

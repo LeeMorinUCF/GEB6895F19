@@ -1,0 +1,8 @@
+RepID,BidderID,Name,Address1,City,State,Zip,Phone
+11,1,Tim Burr,753 West Devon Lane,Garfield,NJ,"""07026""",800-555-1234
+12,4,Jack Lumber,72 High Ridge Ave.,Marlborough,MA,"""01752""",866-555-2345
+13,6,Swing Axley,51 N. Illinois Lane,Villa Park,IL,"""60181""",877-555-5678
+14,2,Paul B. Onion,510 Constitution Circle,Scotch Plains,NJ,"""07076""",888-555-9999
+15,3,Jill Lumber,8979 Windfall St.,Dothan,AL,"""36301""",800-555-1379
+16,7,Chip Wood,664 Vine Rd.,Youngstown,OH,"""44512""",866-555-5555
+17,5,Forrest C. Hopper,8895 Colonial St.,Hinesville,GA,"""31313""",888-555-9876

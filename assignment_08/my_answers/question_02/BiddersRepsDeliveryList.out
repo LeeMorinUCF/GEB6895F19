@@ -1,0 +1,12 @@
+BidderID    Name           Address                  City           State       Zip         Date        AuctionID   Volume      Balance   
+----------  -------------  -----------------------  -------------  ----------  ----------  ----------  ----------  ----------  ----------
+2           Paul B. Onion  510 Constitution Circle  Scotch Plains  NJ          "07076"     20111003    1           1234        15276.92  
+7           Chip Wood      664 Vine Rd.             Youngstown     OH          "44512"     20111107    2           345         4257.3    
+6           Swing Axley    51 N. Illinois Lane      Villa Park     IL          "60181"     20111205    3           2346        30568.38  
+4           Jack Lumber    72 High Ridge Ave.       Marlborough    MA          "01752"     20120109    4           1278        20026.26  
+1           Tim Burr       753 West Devon Lane      Garfield       NJ          "07026"     20120206    5           789         15156.69  
+6           Swing Axley    51 N. Illinois Lane      Villa Park     IL          "60181"     20120305    6           934         10031.16  
+3           Jill Lumber    8979 Windfall St.        Dothan         AL          "36301"     20120402    7           269         4201.78   
+1           Tim Burr       753 West Devon Lane      Garfield       NJ          "07026"     20120507    8           357         4494.63   
+1           Tim Burr       753 West Devon Lane      Garfield       NJ          "07026"     20120604    9           1503        21282.48  
+4           Jack Lumber    72 High Ridge Ave.       Marlborough    MA          "01752"     20120709    10          239         3487.01   
